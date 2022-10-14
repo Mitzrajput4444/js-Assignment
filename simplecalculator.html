@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        input {
+            color: blueviolet;
+        }
+        
+        #ansinput {
+            color: palevioletred;
+        }
+        
+        button:hover {
+            background-color: black;
+            color: red;
+            transition-duration: 2s;
+            border-radius: 4px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" id="num1">
+    <select id="opt">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">X</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="num2"><br><br>
+    <button onclick="cal()">Calculate...!</button>
+    <input type="text" readonly="" id="ansinput">
+    <script>
+        function cal() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let opt = document.getElementById("opt").value;
+            if (opt == '+') {
+                var ans = parseInt(num1) + parseInt(num2);
+            }
+            if (opt == "-") {
+                var ans = parseInt(num1) - parseInt(num2);
+            }
+            if (opt == "*") {
+                var ans = parseInt(num1) * parseInt(num2);
+            }
+            if (opt == '/') {
+                var ans = parseInt(num1) / parseInt(num2);
+            }
+            document.getElementById('ansinput').value = ans;
+        }
+    </script>
+</body>
+
+</html>

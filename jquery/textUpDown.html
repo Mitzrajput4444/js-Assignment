@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textUp-Down</title>
+    <style>
+        p {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="up">Slide-up</button>
+    <button class="down">Slide-Down</button>
+    <button class="both-btn">Slide-up-Down</button>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non hic repellendus corrupti voluptates, amet eaque velit, illum adipisci delectus qui, iusto laudantium. Ipsam quaerat quod distinctio asperiores officiis assumenda, pariatur numquam temporibus
+        iure est sit quidem nius fugit ipsam, modi natus soluta aliquid facere itaque illo officia eligendi temporibus culpa odio magnam deserunt error. Distinctio dicta animi, temporibus ratione aliquam recusandae minima natus nihil. Aut delectus eius
+        animi architecto ratione dolore, neque rem possimus sapiente, illo quod quibusdam itaque quo ipsam commodi debitis quos, adipisci dicta officiis repudiandae rerum. Cumque error ipsa dicta laboriosam voluptates aut assumenda illum voluptate in
+        nostrum ullam soluta, velit fugit ut maxime adipisci doloribus obcaecati architecto vel. Pariatur maiores ratione, quaerat deleniti adipisci est ut rerum a libero assumenda aspernatur consectetur nihil perferendis accusantium praesentium voluptatibus
+        delectus molestiae possimus! Corrupti, suscipit incidunt? Odio maxime, nam molestiae in nesciunt quia corrupti consequatur, possimus non odit nulla, dicta mollitia reprehenderit quam! Nam, vitae et. Illo assumenda architecto iusto necessitatibus
+        explicabo, animi autem libero laudantium numquam distinctio officia!
+    </p>
+    <script src="../jquery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".up").click(function() {
+                $("p").slideUp();
+            })
+            $(".down").click(function() {
+                $("p").slideDown(3000);
+            })
+            $(".both-btn").click(function() {
+                $("p").slideToggle();
+            })
+        })
+    </script>
+</body>
+
+</html>

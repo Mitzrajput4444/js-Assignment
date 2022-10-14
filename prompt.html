@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt box</title>
+</head>
+
+<body>
+    <button onclick="pmpbox()">Click Me...!</button> Name:
+    <i id="ans"></i>
+    <br>
+    <input type="text" readonly id="show">
+    <script>
+        function pmpbox() {
+            let usesrname = prompt("Enter Your Name...", "");
+            //console.log(usesrname);
+            //  document.write(usesrname);
+            // document.getElementById("show").value = usesrname;
+            document.getElementById("ans").innerHTML = usesrname;
+        }
+    </script>
+</body>
+
+</html>

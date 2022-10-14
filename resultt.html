@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        div {
+            margin: 50px auto;
+            width: 500px;
+            background-color: silver;
+        }
+        
+        table {
+            text-align: center;
+            margin: 0 20px;
+            padding: 10px 0;
+        }
+        
+        table td {
+            padding: 10px;
+        }
+        
+        h2 {
+            text-align: center;
+            padding-top: 20px;
+        }
+        
+        input {
+            width: 150%;
+            height: 30px;
+        }
+        
+        button {
+            padding: 0.5rem;
+            margin: 20px 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result">
+        <table>
+            <h2>My Marksheet</h2>
+            <tr>
+                <td>English</td>
+                <td><input id="eng"></td>
+            </tr>
+            <tr>
+                <td>Gujrati</td>
+                <td><input id="guj"></td>
+            </tr>
+            <tr>
+                <td>Account</td>
+                <td><input id="ac"></td>
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td><input id="math"></td>
+            </tr>
+            <tr>
+                <td>java</td>
+                <td><input id="java"></td>
+            </tr>
+            <tr>
+                <td>Php</td>
+                <td><input id="php"></td>
+            </tr>
+            <tr>
+                <td>Total Marks</td>
+                <td id="total-marks"></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td id="percent"></td>
+            </tr>
+            <tr>
+                <td>Grade</td>
+                <td id="grade"></td>
+            </tr>
+        </table>
+        <button id="btn" onclick="myresult()">Get Result...!</button>
+    </div>
+    <script>
+        let eng = document.getElementById("eng").value;
+        let guj = document.getElementById("guj").value;
+        let accout = document.getElementById("ac").value;
+        let math = document.getElementById("math").value;
+        let java = document.getElementById("java").value;
+        let php = document.getElementById("php").value;
+        let totalMarks = document.getElementById("total-marks");
+        let percent = document.getElementById("percent")
+        let grade = document.getElementById("grade");
+
+        function myresult() {
+            /* if (eng === "" || guj === "" || accout === "" || math === "" || java === "" || php === "") {
+                alert("Please Fill Marks....");
+                return false;
+            } 
+            if (eng < 0 || eng > 100 || guj < 0 || guj > 100 || accout < 0 || accout > 100 || java < 0 || java > 100 || php < 0 || php > 100 || math < 0 || math > 100) {
+                alert("please fill corect number");
+                return false;
+            } */
+            let totalCalMarks = parseInt(eng) + parseInt(guj) + parseInt(accout) + parseInt(math) + parseInt(java) + parseInt(php);
+            totalMarks.textContent = totalCalMarks;
+
+            let calTotalPercentage = totalCalMarks / 6;
+            percent.textContent = calTotalPercentage;
+
+            if (calTotalPercentage <= 33) {
+                grade.textContent = "You Are fail...!";
+                //  table.style.background = "red";
+            } else if (calTotalPercentage <= 60) {
+                grade.textContent = "second class";
+            } else if (calTotalPercentage <= 75) {
+                grade.textContent = "First Class"
+            } else {
+                grade.textContent = "distriction";
+            }
+        }
+    </script>
+</body>
+
+</html>

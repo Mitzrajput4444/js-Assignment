@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .loader {
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            background-color: white;
+        }
+        
+        .none {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader">
+        <img width="500px" src=https://www.bing.com/th/id/OGC.74b84c61dc457547ce5c674e0ef82c19?pid=1.7&rurl=https%3a%2f%2fcdn.dribbble.com%2fusers%2f1018473%2fscreenshots%2f3963419%2floader.gif&ehk=%2fyyuXWyWJllexVl3rOdFKahH9zWZkjEYlyw5MstmDU4%3d>
+    </div>
+    <img src="https://source.unsplash.com/random" width="300px" alt="" />
+    <script>
+        let loader = document.querySelector(".loader");
+        window.addEventListener("load", () => {
+            loader.classList.add("none");
+        })
+    </script>
+</body>
+
+</html>

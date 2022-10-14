@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SliderJs</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .arrow {
+            background-color: rgba(255, 255, 255, 0.419);
+            padding: 0.5rem 1rem;
+            font-size: 2rem;
+            color: rgba(0, 0, 0, 0.563);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        h4 {
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+            background-color: rgba(255, 255, 255, 0.489);
+            border-radius: 8px;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        .slides {
+            display: none;
+        }
+        
+        .slider {
+            position: relative;
+            height: 467px;
+            width: 699px;
+        }
+        
+        .rytside {
+            position: absolute;
+            right: 10px;
+            top: 37%;
+        }
+        
+        .leftside {
+            position: absolute;
+            top: 37%;
+            left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slides">
+            <img src="img/img1.jpg">
+            <h4>Img No 1</h4>
+        </div>
+        <div class="slides">
+            <img src="img/img2.jpg">
+            <h4>Img No 2</h4>
+        </div>
+        <div class="slides">
+            <img src="img/img4.jpg">
+            <h4>Img No 3</h4>
+        </div>
+        <div class="slides">
+            <img src="img/img5.jpg">
+            <h4>Img No 4</h4>
+        </div>
+        <span class="leftside arrow" onclick="controler(-1)">&#10094;</span>
+        <span class="rytside arrow" onclick="controler(1)">&#10095;</span>
+    </div>
+
+    <script>
+        let flag = 0;
+
+        function controler(x) {
+            flag = flag + x;
+            slider(flag);
+
+        }
+        slider(flag);
+
+        function slider(num) {
+            let slides = document.getElementsByClassName("slides");
+            if (num == slides.length) {
+                flag = 0;
+                num = 0;
+            }
+            if (num < 0) {
+                flag = slides.length - 1;
+                num = slides.length - 1;
+            }
+            for (let y of slides) {
+                y.style.display = "none";
+            }
+            slides[num].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

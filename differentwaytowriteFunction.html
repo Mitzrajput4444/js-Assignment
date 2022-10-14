@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diffrent Ways To Write Function</title>
+</head>
+
+<body>
+    <script>
+        function msg() {
+            let a = 80;
+            let b = 20;
+            let add = a + b;
+            let mul = a * b;
+            return {
+                adition: add,
+                Multipication: mul
+            };
+
+        }
+        console.log(msg());
+        //Onther Way 
+        let m = 20;
+        let n = 60;
+        let add = m + n;
+        console.log(`sum of ${m} and ${n} is ${add}`);
+
+        //pass perameter in function
+        let username = "mit";
+        let lastname = "gohil";
+        let age = 28;
+
+        function userinfo(username, lastname, age) {
+            //console.log(username, lastname, age);
+        }
+        //   userinfo("mitz", "gohil", 28);
+        console.log(`my name is ${username} and latname is ${lastname} and my age is ${age}`);
+
+
+        //using Arrow Write Function
+        const somemsg = () => {
+            console.log("hi...");
+        }
+        somemsg();
+        const somemsg2 = () => {
+            console.log(`"hi...",my name is ${username}`);
+        }
+        somemsg2();
+        //Whole Function Store In Variable
+        const mymsg = function() {
+            console.log("hi to all");
+        }
+        mymsg();
+    </script>
+</body>
+
+</html>

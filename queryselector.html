@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queryselector</title>
+</head>
+
+<body>
+    <h1 class="my">hi...Everyone</h1>
+    <p id="my2">Lorem ipsum dolor sit amet consectetur adipisicing elit. In provident amet at repellat aut aspernatur alias pariatur earum delectus ratione mollitia debitis sequi iste omnis, sit unde quidem quo perferendis?</p>
+    <h6>its me</h6>
+    <script>
+        //queryselector use for class(.) id(#) and whole tag select
+        let classselect = document.querySelector(".my").innerHTML;
+        console.log(classselect);
+        let idselect = document.querySelector("#my2").innerHTML;
+        console.log(idselect);
+        let tagselect = document.querySelector("h6").innerHTML;
+        console.log(tagselect);
+    </script>
+</body>
+
+</html>
